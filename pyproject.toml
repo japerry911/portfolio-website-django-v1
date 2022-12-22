@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "portfolio-website-django"
+version = "1.0.0"
+description = "Portfolio website written in django (first version)"
+authors = ["Jack Perry <jack.e.perry@outlook.com>"]
+readme = "README.md"
+packages = [{include = "portfolio_website_django"}]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+Django = "^4.1.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
