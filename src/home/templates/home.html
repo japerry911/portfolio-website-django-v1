@@ -6,16 +6,17 @@
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "home/home.css" %}" />
+    <link rel="stylesheet" href="{% static "home/home.css" %}?{% now "U" %}" />
 {% endblock %}
 
 {% block content %}
     <section>
         <div class="text-center bg-image rounded-3" id="home-hero">
-            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.45); width: 100%;">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.55); width: 100%;">
                 <div id="home-hero-main-text-div" class="d-flex justify-content-center h-100">
                     <div id="home-hero-text-div" class="d-flex flex-column align-items-center text-white">
-                        <h1 class="mb-3 display-1">Jack Perry</h1>
+                        <h1 class="mb-1 display-1">Jack Perry</h1>
+                        <hr class="w-50" style="border-width: 2px; opacity: 0.50;" />
                         <div x-data="{
                             text: '',
                             textArray: ['Data Engineer', 'Software Engineer', 'Cloud Engineer', 'Problem Solver'],
