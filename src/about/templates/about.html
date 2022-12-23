@@ -6,8 +6,23 @@
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "about/about.css" %}?{% now "U" %}" />
+    <link rel="stylesheet" href="{% static "about/about.css" %}?{% now "U" %}"/>
 {% endblock %}
 
 {% block content %}
+    <div class="py-4 bg-light flex-column d-flex align-items-center">
+        <h1>About Jack</h1>
+        <div class="container pb-4 bg-light">
+            {% for timeline_entry in timeline_entries %}
+                {% include "includes/timeline_entry.html" %}
+            {% endfor %}
+        </div>
+        <hr class="w-75"/>
+        <h1>Skills</h1>
+        <div class="d-flex justify-content-around flex-wrap">
+            {% for skill in skills %}
+                {% include "includes/skill_card.html" %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
