@@ -5,12 +5,14 @@
         <img class="card-img-top" src="{% static "blog/images/"|add:post.image_name %}" alt="Card image cap" style="width: 10rem;">
     </div>
     <div class="card-block p-3 d-flex flex-column justify-content-between h-100">
-        <div>
+        <div class="d-flex flex-column justify-content-end h-100">
             <h4 class="card-title">{{ post.title }}</h4>
             <h6 class="fst-italic">Publish Date: {{ post.published_at }}</h6>
-            {% for category in post.categories_as_list %}
-                <span class="badge rounded-pill bg-primary">{{ category }}</span>
-            {% endfor %}
+            <div class="d-flex">
+                {% for category in post.categories_as_list %}
+                    <span class="badge rounded-pill bg-primary me-1">{{ category }}</span>
+                {% endfor %}
+            </div>
         </div>
         <hr />
         <p class="card-text">{{ post.excerpt }}</p>
