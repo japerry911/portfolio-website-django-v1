@@ -19,7 +19,7 @@
                         <hr class="w-50" style="border-width: 2px; opacity: 0.50;" />
                         <div x-data="{
                             text: '',
-                            textArray: ['Data Engineer', 'Software Engineer', 'Cloud Engineer', 'Problem Solver'],
+                            textArray: ['Data', 'Software', 'Cloud'],
                             textIndex: 0,
                             charIndex: 0,
                             pauseEnd: 1000,
@@ -62,7 +62,7 @@
                             }
                           })()"
                         >
-                            <h2 class="mb-3" x-text="text"></h2>
+                            <span class="mb-3 display-5" x-text="text"></span><span class="display-5">&nbsp;Engineer</span>
                         </div>
                         <a id="home-cta-about-btn" class="border-dark btn btn-dark btn-lg w-50" href="{% url "about-page" %}" role="button">About Jack</a>
                     </div>
