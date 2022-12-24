@@ -6,9 +6,16 @@
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "blog/blog.css" %}" />
+    <link rel="stylesheet" href="{% static "blog/blog.css" %}?{% now "U" %}" />
 {% endblock %}
 
 {% block content %}
-    <h1>Hello World!</h1>
+    <div class="py-4 bg-light flex-column d-flex align-items-center">
+        <h1>Blogposts</h1>
+        <div class="d-flex justify-content-around flex-wrap">
+            {% for post in posts %}
+                {% include "includes/post.html" %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
