@@ -1,3 +1,7 @@
 body {
     background-color: #f8f9fa !important;
 }
+
+.border-top-3 {
+    border-top-width: 3px;
+}
