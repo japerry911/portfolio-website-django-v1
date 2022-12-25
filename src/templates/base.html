@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100 w-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -20,11 +20,11 @@
     {% endblock %}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body class="h-100 w-100">
     <header id="main-navigation">
         {% include "includes/navbar.html" %}
     </header>
-    <main>
+    <main class="w-100 h-100">
         {% block content %}
         {% endblock %}
     </main>
