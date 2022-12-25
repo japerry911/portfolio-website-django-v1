@@ -17,7 +17,7 @@ class Post(models.Model):
     published_at = models.DateField(null=True)
     excerpt = models.CharField(max_length=100, null=True)
     categories = models.ManyToManyField("Category", related_name="posts")
-    image_size = models.CharField(max_length=6, default="15rem")
+    image_size = models.CharField(max_length=6, default="12rem")
 
     def __str__(self):
         return f"{self.title} - {self.published_at}"

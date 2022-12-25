@@ -10,5 +10,12 @@
 {% endblock %}
 
 {% block content %}
-    <h1>HELLO WORLD</h1>
+    <div class="py-4 flex-column d-flex align-items-center">
+        <h1>PROJECTS</h1>
+        <div class="d-flex justify-content-around flex-wrap">
+            {% for project in projects %}
+                {% include "includes/project.html" %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    PROJECT TITLE HERE
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "projects/project-details.css" %}?{% now "U" %}" />
+{% endblock %}
+
+{% block content %}
+    HELLO WORLD
+{% endblock %}

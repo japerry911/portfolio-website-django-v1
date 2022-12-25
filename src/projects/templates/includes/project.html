@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="card m-5 bg-light text-light rounded border border-3 border-dark shadow-lg d-flex flex-column justify-content-between" style="width: 30rem; height: 35rem; box-shadow: 0 4px 2px -2px gray;">
+    <div class="card-img text-center py-3 mt-auto">
+        <img class="card-img-top" src="{% static "projects/images/"|add:project.image_name %}" alt="Card image cap" style="width: 15rem;">
+    </div>
+    <div class="card-block p-3 d-flex flex-column justify-content-between h-auto">
+        <div class="d-flex flex-column justify-content-end h-100 mt-5 mb-auto">
+            <h4 class="card-title text-dark">{{ project.title }}</h4>
+            <h6 class="fst-italic text-dark">Publish Date: {{ project.published_quarter_year }}</h6>
+            <div class="d-flex flex-wrap">
+                {% for technology in project.technology_as_list %}
+                    <span class="badge rounded-pill bg-primary m-1">{{ technology }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <hr class="text-primary border-top-3" />
+        <a href="{% url "project-detail-page" project.slug %}" class="btn btn-primary">More Details</a>
+    </div>
+</div>
