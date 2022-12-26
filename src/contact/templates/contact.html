@@ -10,5 +10,31 @@
 {% endblock %}
 
 {% block content %}
-    <h1>HELLO WORLD</h1>
+    <div class="container-fluid h-100 w-100 flex-column d-flex align-items-center justify-content-center">
+        <div class="pt-5 pb-5 bg-white rounded border border-3 border-dark shadow-lg w-75 h-75 d-flex flex-column align-items-center justify-content-around">
+            <div class="d-flex flex-column justify-content-center align-items-center w-75">
+                <div>
+                    <h1>CONTACT JACK</h1>
+                </div>
+                <hr class="text-primary w-90" style="padding: 0.15rem;" />
+            </div>
+            <div class="d-flex flex-column justify-content-evenly align-items-center w-100 h-100">
+                <div class="w-50">
+                  <label for="name" class="form-label">Name*</label>
+                  <input required type="text" class="form-control border-dark" id="name">
+                </div>
+                <div class="w-50">
+                  <label for="email" class="form-label">Email Address*</label>
+                  <input required type="email" class="form-control border-dark" id="email" placeholder="skylord@bark.com">
+                </div>
+                <div class="w-50">
+                  <label for="message" class="form-label">Message*</label>
+                  <textarea class="form-control border-dark" id="message" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="w-25">
+                <button class="btn btn-primary w-100" type="submit">Send Message</button>
+            </div>
+        </div>
+    </div>
 {% endblock %}
