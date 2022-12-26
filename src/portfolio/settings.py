@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "blog",
     "about",
     "home",
+    "contact",
 ]
 
 MIDDLEWARE = [
