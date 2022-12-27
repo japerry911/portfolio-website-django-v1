@@ -1,0 +1,14 @@
+.htmx-indicator{
+        display: none;
+        transition: opacity 500ms ease-in;
+    }
+
+.htmx-request .htmx-indicator{
+    display: inline-block;
+    opacity: 1;
+}
+
+.htmx-request.htmx-indicator{
+    display: inline-block;
+    opacity: 1;
+}

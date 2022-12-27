@@ -6,12 +6,13 @@
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" {% static "contact/contact.css" %} />
+    <link rel="stylesheet" href="{% static "contact/contact.css" %}?{% now "U" %}" />
 {% endblock %}
 
 {% block content %}
     <div class="container-fluid h-100 w-100 flex-column d-flex align-items-center justify-content-center" style="background: linear-gradient(#f8f9fa, #0d6efd);">
-        <div class="pt-5 pb-5 bg-white rounded border border-3 border-dark shadow-lg w-75 h-75 d-flex flex-column align-items-center justify-content-around">
+        <form hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-post="/contact" hx-indicator="#spinner" class="pt-5 pb-5 bg-white rounded border border-3 border-dark shadow-lg w-75 h-75 d-flex flex-column align-items-center justify-content-around">
+            {% csrf_token %}
             <div class="d-flex flex-column justify-content-center align-items-center w-75">
                 <div>
                     <h1>Contact Jack</h1>
@@ -20,20 +21,23 @@
             </div>
             <div class="d-flex flex-column justify-content-evenly align-items-center w-100 h-100">
                 <div class="w-50">
-                  <label for="name" class="form-label">Name*</label>
-                  <input required type="text" class="form-control border-dark" id="name">
+                  <label for="id_name" class="form-label">Name</label>
+                  <input required type="text" class="form-control border-dark" name="name" id="id_name">
                 </div>
                 <div class="w-50">
-                  <label for="email" class="form-label">Email Address*</label>
-                  <input required type="email" class="form-control border-dark" id="email" placeholder="skylord@bark.com">
+                  <label for="id_email_address" class="form-label">Email Address</label>
+                  <input required type="email" class="form-control border-dark" id="id_email_address" name="email_address" placeholder="skylord@bark.com">
                 </div>
                 <div class="w-50">
-                  <label for="message" class="form-label">Message*</label>
-                  <textarea class="form-control border-dark" id="message" rows="5"></textarea>
+                  <label for="id_message" class="form-label">Message</label>
+                  <textarea required class="form-control border-dark" id="id_message" name="message" rows="5"></textarea>
                 </div>
             </div>
             <div class="w-25">
-                <button class="btn btn-primary w-100" type="submit">Send Message</button>
+                <button class="btn btn-primary w-75" type="submit">
+                    Send Message
+                    <span class="htmx-indicator spinner-border spinner-border-sm" id="spinner"></span>
+                </button>
             </div>
         </div>
     </div>

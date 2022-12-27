@@ -27,6 +27,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-htmx"
+version = "1.13.0"
+description = "Extensions for using Django with htmx."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
 name = "sqlparse"
 version = "0.4.3"
 description = "A non-validating SQL parser."
@@ -45,7 +56,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.10"
-content-hash = "648ce056231ccd72ff87241695a7d611e3649f1c0fb120efd2673d2b665deb12"
+content-hash = "4ddb8f925c98ebc98679081c6cb000903a8c71a2fd00215f3162c9e4bfabcfd7"
 
 [metadata.files]
 asgiref = [
@@ -55,6 +66,10 @@ asgiref = [
 Django = [
     {file = "Django-4.1.4-py3-none-any.whl", hash = "sha256:0b223bfa55511f950ff741983d408d78d772351284c75e9f77d2b830b6b4d148"},
     {file = "Django-4.1.4.tar.gz", hash = "sha256:d38a4e108d2386cb9637da66a82dc8d0733caede4c83c4afdbda78af4214211b"},
+]
+django-htmx = [
+    {file = "django-htmx-1.13.0.tar.gz", hash = "sha256:848c3e195b8757656626c8a099f9be59c6d30f468f1d54e69f0f2a48f0a14928"},
+    {file = "django_htmx-1.13.0-py3-none-any.whl", hash = "sha256:781a59376d769aa28302619e73d37d481a125ab155d9fdd7fb17f10e7d25f352"},
 ]
 sqlparse = [
     {file = "sqlparse-0.4.3-py3-none-any.whl", hash = "sha256:0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34"},

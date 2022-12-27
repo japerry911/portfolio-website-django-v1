@@ -9,6 +9,7 @@ packages = [{include = "portfolio_website_django"}]
 [tool.poetry.dependencies]
 python = "~3.10"
 Django = "^4.1.4"
+django-htmx = "^1.13.0"
 
 
 [build-system]
