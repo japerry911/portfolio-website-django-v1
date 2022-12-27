@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinLengthValidator
 
 
 class Category(models.Model):
@@ -15,7 +16,13 @@ class Post(models.Model):
     image_name = models.CharField(max_length=200, null=True)
     blog_link = models.CharField(max_length=1_000, null=True)
     published_at = models.DateField(null=True)
-    excerpt = models.CharField(max_length=100, null=True)
+    excerpt = models.CharField(
+        max_length=100,
+        null=True,
+        validators=[
+            MinLengthValidator(61),
+        ],
+    )
     categories = models.ManyToManyField("Category", related_name="posts")
     image_size = models.CharField(max_length=6, default="12rem")
 

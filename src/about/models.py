@@ -7,6 +7,7 @@ class TimelineEntry(models.Model):
     title = models.CharField(max_length=150)
     excerpt = models.CharField(max_length=200)
     content = models.TextField(validators=[MinLengthValidator(50)])
+    order_number = models.IntegerField(null=True)
 
     def __str__(self):
         return f"{self.title} - {self.formatted_datetime}"

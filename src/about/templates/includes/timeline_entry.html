@@ -10,8 +10,8 @@
                         data-bs-toggle="collapse">Show Details ▼
                 </button>
                 <div class="collapse border" id="details_{{ timeline_entry.id }}">
-                    <div class="p-2 text-monospace">
-                        <span>{{ timeline_entry.content }}</span>
+                    <div class="p-5 text-monospace">
+                        {{ timeline_entry.content|safe }}
                     </div>
                 </div>
             </div>

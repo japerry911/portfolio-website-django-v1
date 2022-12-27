@@ -10,15 +10,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="py-4 bg-light flex-column d-flex align-items-center">
-        <h1>ABOUT JACK</h1>
-        <div class="container pb-4 bg-light">
+    <div class="py-4 flex-column d-flex align-items-center" style="background: linear-gradient(#f8f9fa, #cf6766);">
+         <h1 class="text-center">About Jack</h1>
+        <div class="container pb-4">
             {% for timeline_entry in timeline_entries %}
                 {% include "includes/timeline_entry.html" %}
             {% endfor %}
         </div>
-        <hr class="w-75"/>
-        <h1>SKILLS</h1>
+        <hr class="w-100"/>
+        <h1 class="text-center">Skills</h1>
         <div class="d-flex justify-content-around flex-wrap">
             {% for skill in skills %}
                 {% include "includes/skill_card.html" %}

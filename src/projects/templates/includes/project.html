@@ -7,7 +7,7 @@
     <div class="card-block p-3 d-flex flex-column justify-content-between h-auto">
         <div class="d-flex flex-column justify-content-end h-100 mt-5 mb-auto">
             <h4 class="card-title text-dark">{{ project.title }}</h4>
-            <h6 class="fst-italic text-dark">Publish Date: {{ project.published_quarter_year }}</h6>
+            <h6 class="fst-italic text-secondary">Publish Date: {{ project.published_quarter_year }}</h6>
             <div class="d-flex flex-wrap">
                 {% for technology in project.technology_as_list %}
                     <span class="badge rounded-pill bg-primary m-1">{{ technology }}</span>

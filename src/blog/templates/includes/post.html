@@ -7,7 +7,7 @@
     <div class="card-block p-3 d-flex flex-column justify-content-between h-100">
         <div class="d-flex flex-column justify-content-end h-100">
             <h4 class="card-title text-dark">{{ post.title }}</h4>
-            <h6 class="fst-italic">Publish Date: {{ post.published_at }}</h6>
+            <h6 class="fst-italic text-secondary">Publish Date: {{ post.published_at }}</h6>
             <div class="d-flex">
                 {% for category in post.categories_as_list %}
                     <span class="badge rounded-pill bg-primary me-1">{{ category }}</span>
