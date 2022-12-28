@@ -13,11 +13,11 @@
     <section>
         <div class="text-center bg-image rounded-3" id="home-hero">
             <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.55); width: 100%;">
-                <div id="home-hero-main-text-div" class="d-flex justify-content-center h-100">
-                    <div id="home-hero-text-div" class="d-flex flex-column align-items-center text-white">
+                <div id="home-hero-main-text-div" class="d-flex justify-content-end align-items-center h-100 w-100">
+                    <div id="home-hero-text-div" class="d-flex flex-column align-items-center text-white me-5 pe-5 w-50">
                         <h1 class="mb-1 display-1">Jack Perry</h1>
                         <hr class="w-50" style="border-width: 2px; opacity: 0.50;" />
-                        <div class="mb-5" x-data="{
+                        <div class="mb-1" x-data="{
                             text: '',
                             textArray: ['Data', 'Software', 'Cloud'],
                             textIndex: 0,
@@ -64,8 +64,8 @@
                         >
                             <span class="mb-3 display-5" x-text="text"></span><span class="display-5">&nbsp;Engineer</span>
                         </div>
-                        <a style="background-color: #0d6efd; color: #fff;" id="home-cta-about-btn" class="border-dark btn btn-lg w-50" href="{% url "about-page" %}" role="button">
-                            <span>About Jack</span>
+                        <a style="background-color: #0d6efd; color: #fff;" id="home-cta-about-btn" class="border-dark btn w-50" href="{% url "about-page" %}" role="button">
+                            <span style="font-size: 1.25rem">About Jack</span>
                         </a>
                     </div>
                 </div>

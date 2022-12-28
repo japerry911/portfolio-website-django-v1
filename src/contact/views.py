@@ -28,7 +28,7 @@ def index(request):
 
             _email(message=email_message)
 
-            return HttpResponseRedirect("/contact/success")
+            return HttpResponseRedirect("success")
         except KeyError:
             raise NotImplementedError
 

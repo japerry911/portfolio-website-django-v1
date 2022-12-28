@@ -2,7 +2,7 @@
     <div class="col py-4">
         <div class="card">
             <div class="card-body">
-                <div class="float-end text-dark">{{ timeline_entry.formatted_datetime }}</div>
+                <div class="float-end text-secondary">{{ timeline_entry.formatted_datetime }}</div>
                 <h4 class="card-title text-dark">{{ timeline_entry.title }}</h4>
                 <p class="card-text">{{ timeline_entry.excerpt }}</p>
                 <button class="btn btn-sm btn-outline-secondary text-dark" type="button"
@@ -10,7 +10,7 @@
                         data-bs-toggle="collapse">Show Details ▼
                 </button>
                 <div class="collapse border" id="details_{{ timeline_entry.id }}">
-                    <div class="p-5 text-monospace">
+                    <div class="p-3 text-monospace">
                         {{ timeline_entry.content|safe }}
                     </div>
                 </div>

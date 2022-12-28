@@ -10,16 +10,16 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid h-100 w-100 flex-column d-flex align-items-center justify-content-center">
-        <div class="bg-white rounded border border-3 border-dark shadow-lg w-75 h-90 d-flex flex-column align-items-center justify-content-around">
-            <div>
-                <img src="{% static "projects/images/"|add:project.image_name %}" alt="project image" style="width: 25rem;" />
+    <div class="container-fluid w-100 flex-column d-flex align-items-center justify-content-center">
+        <div class="bg-white rounded border pd-5 mt-5 mb-5 border-3 border-dark shadow-lg w-75 d-flex flex-column align-items-center justify-content-around">
+            <div class="w-25">
+                <img src="{% static "projects/images/"|add:project.image_name %}" alt="project image" class="w-100 pt-3"/>
             </div>
             <hr class="text-primary w-95" style="padding: 0.15rem;" />
             <div>
                 <h3>Description:</h3>
             </div>
-            <div class="ms-5 me-5 mb-3">
+            <div class="ms-3 me-3 mb-3">
                 <p>{{ project.description }}</p>
             </div>
             <div>

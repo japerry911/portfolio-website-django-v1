@@ -1,38 +1,36 @@
 #home-hero {
     background-image: url('./images/jack-and-skylord.png');
     height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: contain;
 }
 
-@media screen and (min-width: 700px) {
-    #home-hero {
-        background-position: left;
-    }
-}
-
-#home-hero-text-div {
-    width: 100%;
-    height: 87%;
-}
-
-@media screen and (min-width: 700px) {
-    #home-hero-text-div {
-        width: 50%;
-        margin-left: auto;
-        margin-right: 5rem;
-        height: 35%;
-    }
-}
-
-#home-hero-main-text-div {
-    align-items: flex-start;
-}
-
-@media screen and (min-width: 700px) {
+@media only screen and (max-width: 1350px) {
     #home-hero-main-text-div {
-        align-items: center;
+        justify-content: flex-end!important;
+        align-items: flex-end!important;
+    }
+
+    #home-hero-text-div {
+        margin: 0 0 4rem 0!important;
+        padding: 0!important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #home-hero {
+        background-position: top;
+    }
+
+    #home-hero-main-text-div {
+        justify-content: center!important;
+        align-items: flex-end!important;
+    }
+
+    .w-50 {
+        width: 85%!important;
     }
 }
 
@@ -76,10 +74,4 @@
 
 #home-cta-about-btn:hover {
     border-color: white !important;
-}
-
-@media screen and (min-width: 700px) {
-    #home-cta-about-btn {
-        margin-bottom: 5rem;
-    }
 }

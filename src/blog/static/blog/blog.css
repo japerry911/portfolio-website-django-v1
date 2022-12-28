@@ -5,3 +5,25 @@ body {
 .border-top-3 {
     border-top-width: 3px;
 }
+
+@media only screen and (max-width: 1250px) {
+    .w-25 {
+        width:35%!important;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .w-25 {
+        width: 55% !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .w-25 {
+        width: 100%!important;
+    }
+
+    .m-5 {
+        margin: 2rem 1rem!important;
+    }
+}

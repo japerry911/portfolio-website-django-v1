@@ -12,3 +12,39 @@
     display: inline-block;
     opacity: 1;
 }
+
+@media only screen and (min-width: 1300px) {
+    .w-75 {
+        width: 60%!important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .mb-3-media {
+        margin-bottom: 3rem!important;
+    }
+
+    .pt-5 {
+        padding-top: 1rem!important;
+    }
+
+    .pb-5 {
+        padding-bottom: 1rem!important;
+    }
+
+    .h-75 {
+        height: 85%!important;
+    }
+
+    .w-75 {
+        width: 90%!important;
+    }
+
+    .w-50 {
+        width: 75%!important;
+    }
+
+    .w-25 {
+        width: 50%!important;
+    }
+}

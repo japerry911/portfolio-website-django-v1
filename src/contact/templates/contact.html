@@ -11,7 +11,7 @@
 
 {% block content %}
     <div class="container-fluid h-100 w-100 flex-column d-flex align-items-center justify-content-center" style="background: linear-gradient(#f8f9fa, #0d6efd);">
-        <form hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-post="/contact" hx-indicator="#spinner" class="pt-5 pb-5 bg-white rounded border border-3 border-dark shadow-lg w-75 h-75 d-flex flex-column align-items-center justify-content-around">
+        <form hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' hx-post="/contact/" hx-indicator="#spinner" class="pt-5 pb-5 bg-white rounded border border-3 border-dark shadow-lg w-75 h-75 d-flex flex-column align-items-center justify-content-around mb-3-media">
             {% csrf_token %}
             <div class="d-flex flex-column justify-content-center align-items-center w-75">
                 <div>
