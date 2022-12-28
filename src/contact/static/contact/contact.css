@@ -19,7 +19,7 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .mb-3-media {
         margin-bottom: 3rem!important;
     }
@@ -33,7 +33,8 @@
     }
 
     .h-75 {
-        height: 85%!important;
+        margin-top: 3rem;
+        height: 95%!important;
     }
 
     .w-75 {
@@ -46,5 +47,9 @@
 
     .w-25 {
         width: 50%!important;
+    }
+
+    button {
+        margin-top: 1rem!important;
     }
 }
