@@ -23,9 +23,15 @@ jobs:
       - name: List files
         run: ls
   deploy-to-app-engine:
+    needs: generate-requirements-txt
     runs-on: ubuntu-latest
     steps:
       - name: Authenticate with GCP
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}
+      - name: Deploy to GCP App Engine
+        uses: google-github-actions/deploy-appengine@v1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          working_directory: src
