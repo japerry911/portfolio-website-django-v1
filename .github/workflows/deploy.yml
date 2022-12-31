@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-requirements-txt:
+  deploy-to-app-engine:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -22,7 +22,6 @@ jobs:
         run: poetry export -f requirements.txt -o requirements.txt
       - name: List files
         run: ls
-  deploy-to-app-engine:
     needs: generate-requirements-txt
     runs-on: ubuntu-latest
     steps:
