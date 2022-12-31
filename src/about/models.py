@@ -10,7 +10,7 @@ class TimelineEntry(models.Model):
     order_number = models.IntegerField(null=True)
 
     def __str__(self):
-        return f"{self.title} - {self.formatted_datetime}"
+        return f"{self.order_number}: {self.title} - {self.formatted_datetime}"
 
 
 class Skill(models.Model):

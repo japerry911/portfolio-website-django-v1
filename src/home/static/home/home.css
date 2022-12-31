@@ -1,7 +1,6 @@
 #home-hero {
     background-image: url('./images/jack-and-skylord.png');
     height: 100vh;
-    width: 100vw;
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
