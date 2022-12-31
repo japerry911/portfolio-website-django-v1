@@ -2,7 +2,6 @@ runtime: python310
 
 env_variables:
     APPENGINE_URL: https://jack-p-portfolio-django.uc.r.appspot.com
-    DEBUG: true
 
 handlers:
 - url: /static
