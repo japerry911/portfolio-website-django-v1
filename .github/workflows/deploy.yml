@@ -19,7 +19,7 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
       - name: Generate requirements.txt
-        run: poetry export -f requirements.txt -o src/requirements.txt
+        run: poetry export -f requirements.txt -o ./src/requirements.txt
       - name: Authenticate with GCP
         uses: google-github-actions/auth@v1
         with:
